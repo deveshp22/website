@@ -1,0 +1,954 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,500&display=swap');
+
+button,
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fullcontainer{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(54, 50, 50);
+    position: fixed;
+    z-index: 10;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .logo{
+    height: 75px;  
+    width: 20%;
+    padding: 10px;
+}
+ header .container .logo img{
+    height: 100%;
+ }
+ header nav ul{
+    list-style-type: none;
+}
+ 
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    transition: 0.5s;
+}
+header nav ul li a:hover{
+    background-color: tomato;
+
+}
+.banner{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../images/kids-kindergarten-thai-thailand.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner h1{
+    margin-top: 230px;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 2px black;
+    width: 30%;
+    line-height: 4.2rem;
+    font-weight: 500;
+    margin-left: 130px;
+}
+
+.banner p{
+    color: rgb(19, 11, 11);
+    width: 100%;
+    padding: 0 15px;
+    margin-left: 130px;
+}
+
+.banner button{
+    background-color: #8cd0df;
+    border: 0;
+    outline: none;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 130px;
+}
+
+.sectiontitle{
+    width: 300px;
+    border-bottom: 3px solid tomato;
+    text-align: center;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+    
+}
+section{
+    padding: 100px 0;
+    position: relative;
+}
+#aboutsection .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutsection .cards > div{
+    width: 350px;
+    background-color: rgba(207, 189, 189, 0.39);
+    padding: 35px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    height: 215px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#aboutsection .cards > div .title{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutsection .cards > div p{
+    font-size: 14px;
+    margin-top: 15px;
+}
+#aboutsection .cards > div button{
+    border: 1px solid tomato;
+    outline: none;
+    padding: 7px 15px;
+    margin: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#aboutsection .cards > div:hover {
+    /* width: 400px;
+    margin-top: -20px; */
+    border-color: tomato;
+    /* padding: 55px;
+    height: auto; */
+} 
+
+#aboutsection .cards > div:hover button{
+    background-color: tomato;
+    color: #fff;
+}
+
+.programs{
+    background-color: #e2e2e2;
+}
+
+.programs .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.programs .boxContainer .box{
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.programs .boxContainer .box .cardImage{
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.programs .boxContainer .box .cardImage:after{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+
+}
+
+ .programs .boxContainer .box:nth-child(1) .cardImage, 
+ .programs .boxContainer .box:nth-child(1) .cardImage:after{ 
+    background-image: url("../images/download1.jpg");
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage,
+.programs .boxContainer .box:nth-child(2) .cardImage:after{
+    background-image: url("../images/poor.jpg");
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage,
+.programs .boxContainer .box:nth-child(3) .cardImage:after{
+    background-image: url("../images/download2.jpg");
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage,
+.programs .boxContainer .box:nth-child(4) .cardImage:after{
+    background-image: url("../images/download4.jpg");
+}
+
+.programs .boxContainer .box:hover .cardImage:after{
+    top: 100%;
+} 
+
+.programs .boxContainer .box .programTitle{
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.programs .boxContainer .box .donationCount{
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 10px;
+}
+
+.programs .boxContainer .box .donationCount span{
+    color: tomato;
+}
+
+.programs .boxContainer .box button{
+    position: absolute;
+    left: 50%;
+    background-color: tomato;
+    color: #fff;
+    transform: translate(-50%);
+    bottom: -15px;
+    border-radius: 60px;
+    padding: 7px 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.gallery .galleryContainer{
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.gallery .galleryContainer .item{
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+.gallery .galleryContainer img{
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .title{
+    position: absolute;
+    background-color: rgb(185, 180, 180);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .item:hover img{
+    transform: scale(1,2);
+}
+
+.join{
+    background-image: url("../images/2848818.jpg");
+    color: #fff;
+}
+
+.join .joinTitle{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.join button{
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.join button.joinNow{
+    margin-right: 10px;
+    background-color: #424242;
+    color: #fff;
+}
+
+.join button.donateNow{
+    background-color: #424242;
+    color: #fff;
+}
+
+footer{
+    background-color: #181818;
+    color: #e2e2e2;
+    padding: 50px 0;
+    font-size: 14px;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+footer .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    padding: 0 0 5px 0;
+}
+footer p{
+    margin-bottom: 10px;
+}
+
+footer .linksContainer ul{
+    list-style-type: none;
+}
+footer .linksContainer ul li a{
+    text-decoration: none;
+    color: #e2e2e2;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+footer .linksContainer ul li a:hover{
+    background-color: #4267B2;
+}
+
+footer .newsLetterContainer img{
+    height: 40px;
+    margin-bottom: 11px;
+}
+
+footer .newsLetterContainer input{
+    border-color: transparent;
+    border: 1px solid #7f7f7f;
+    outline: none;
+    padding: 10px 15px;
+    width: 100px;
+    margin-top: 10px;
+    color: #e2e2e2;
+    border-radius: 3px;
+}
+.sci{
+    margin-top: 20px;
+}
+
+.sci li{
+    list-style: none;
+    display: flex;
+}
+
+.sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+
+}
+.sci li a:hover{
+    background: rgb(218, 20, 20);
+}
+.sci  li a:nth-child(1) i{
+    color: #4267B2;
+    
+}
+.sci li a:nth-child(2) i{
+    color: #fb3958 ;
+}
+.sci li a:nth-child(3) i{
+    color: #00acee  ;
+}
+.sci li a:nth-child(4) i{
+    color: #25D366 ;
+}
+
+/* donation section */
+
+.Donation h1{
+    background-color: rgb(136, 211, 136);
+    text-align: center;
+
+}
+
+.DonationBox {
+    margin: 50px auto;
+    width: 27%;
+    padding: 20px;
+    background-color: rgb(203, 203, 212);
+    
+}
+
+.text{
+    text-align: left;
+}
+
+.Bank h1{
+    background-color: rgb(136, 211, 136);
+    text-align: center;
+    width: 100%; 
+    height: 50%;
+ }
+
+ .DonationBox #DON{
+     width: 300px;
+    height: 270px;
+ }
+
+ #TI{
+     height:50% ;
+     width: 76%;
+     margin: 10px 10px 0px;
+     background-color: rgb(187, 224, 196);
+     margin: 27px;
+ }
+
+ .Bankinfo h3{
+     margin: 30px;
+     margin-bottom: 1.5rem;
+     font-size: 1.75rem;
+     font-family:  sans-serif;
+    }
+
+    /* about section */
+
+    .aboutB{
+        min-height: 100vh;
+        width: 100%;
+        background-image: url("../images/iiiii.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .aboutB h1{
+        margin-top:200px;
+        display: inline-block;
+        font-size: 2rem;
+        color: #fff;
+        text-shadow: 0 0 2px black;
+        width: 40%;
+        line-height: 4.2rem;
+        font-weight: 500;
+        margin-left: 130px;
+    }
+    
+    .aboutB p{
+        color: rgb(19, 11, 11);
+        width: 60%;
+        margin-left: 130px;
+    }
+
+    /* .secRight{
+        height: 500px;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        
+    }
+    
+    .secleft{
+        height: 300px;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+    
+    }
+    
+    .paras{
+        padding: 0 65px;
+    }
+    
+    
+    .sectiontag{
+        font-size: 30px;
+        margin: 19px;
+        
+    }
+    
+    .sectionsubtag{
+        margin: 20px;
+    }
+    
+    .second #six{
+        width: 360px;
+        margin: 3px;
+        padding: 10px;
+        height: 270px;
+    }
+
+     */
+    /* Contact Section */
+    
+    .contactform{
+        padding: 50px 54px;
+        background: #fff;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        max-width: 300px;
+        margin: 0 193px ;
+        float: right;
+    }
+    
+    .contactform h3{
+        color: #111;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    .contactform .inputbox{
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contactform .inputbox input{
+        width: 100%;
+        border: 1px solid #555;
+        padding: 10px;
+        color: #111;
+        outline: none;
+        font: 16px;
+        font-weight: 300;
+        resize: none;
+    }
+    
+    .contactform .inputbox textarea{
+        width: 100%;
+        border: 1px solid #555;
+        padding: 10px;
+        color: #111;
+        outline: none;
+        font: 16px;
+        font-weight: 300;
+        resize: none;
+    }
+    
+    .contactform .inputbox input[type="submit"]{
+        font-size: 1em;
+        color: #fff;
+        background: #9b2a50;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: 00.5s;
+        max-width: 100px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+    }
+    .AD{
+        width: 528px;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        margin-top: 30px;
+        float: left;
+        
+    }
+    
+    .AD .Adinfo{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .AD .Adinfo .A1{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    
+    }
+    
+    .AD .Adinfo .A1 .icon{
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px; 
+        color: blue;
+    }
+    
+    .AD .Adinfo .A1 .icon .text{
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        flex-direction: column;
+        font-weight: 300;
+        
+    }
+    
+    
+    .address h3{
+        position: relative;
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 15px;
+        margin-bottom: 30px
+        
+    }
+
+    .AD{
+        width: 528px;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        margin-top: 30px;
+        float: left;
+        
+    }
+    
+    .AD .Adinfo{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .AD .Adinfo .A1{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    
+    }
+    
+    .AD .Adinfo .A1 .icon{
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px; 
+        color: blue;
+    }
+    
+    .AD .Adinfo .A1 .icon .text{
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        flex-direction: column;
+        font-weight: 300;
+        
+    }
+    .AD{
+        width: 528px;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        margin-top: 30px;
+        float: left;
+        
+    }
+    
+    .AD .Adinfo{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .AD .Adinfo .A1{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    
+    }
+    
+    .AD .Adinfo .A1 .icon{
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px; 
+        color: blue;
+    }
+    
+    .map{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 20px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+    
+    
+
+    
+    /* Media Queries */
+
+
+@media  screen and (max-width:1140px) {
+    .container{
+        padding: 0 15px;
+    }
+    .aboutB{
+        min-height: 56vh;
+    }
+    .sectionsubtag{
+        padding: 16px;
+        text-align: center;
+    }
+    
+}
+@media  screen and (max-width:1080px) {
+    banner h1{
+        margin-top: 200px;    
+    }
+    .banner p{
+        width: 85%;
+    }
+    #aboutsection .cards{
+        justify-content: space-around;
+        height: auto;
+    }
+    #aboutsection .cards > div{
+        margin: 10px 0;
+    }
+
+}
+
+@media  screen and (max-width:1024px) {
+    .banner{
+        background-position-x: 45%;
+    }
+    .banner h1{
+        font-size: 2.5rem;
+    }
+    .programs .boxContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .DonationBox{
+        width: 40%;
+    }
+    .DonationB{
+        padding: 70px 0;
+        position: relative;
+    }
+    .aboutB p{
+        width: 48%;
+        margin-left: 56px ;
+    }
+    .aboutB h1{
+        margin-left: 46px;
+        width: 53%;
+    }
+    .sectiontag{
+        text-align: center;
+    }
+    .sectionsubtag{
+        text-align: center;
+    }
+    .second {
+         display: block;
+        margin-left: auto;
+        margin-right: auto; 
+        width: 50%; 
+    }
+
+    .contactform{
+        margin: 7px 363px;
+    }
+
+}
+
+@media  screen and (max-width:768px) {
+    header nav{
+        position: relative;
+        border: 2px solid #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    header{
+        width: 100%;
+    }
+    header nav:after{
+        top: 17px;
+    }
+    header nav:before{
+         top: 7px;
+    }
+    header nav:after,
+    header nav:before{
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+
+    header nav ul{
+        position: relative;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+    }
+    header nav:hover ul{
+        right: 56px;
+    }
+    header nav ul li{
+        display: block;
+    }
+    header nav ul li a{
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .banner{
+        background-position-x: 65%;
+    }
+    .banner {
+        font-size: 14px;
+    }
+    .banner p, 
+    .bannerh1{
+        width: 70%;
+    }
+    #aboutSection .cards > div:hover{
+        width: 350px;
+    }
+    .gallery .galleryContainer{
+        column-count: 2;
+    }
+
+    .DonationBox{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(203, 203, 212);
+    margin: auto;
+    }
+    .sectiontag{
+        text-align: center;
+        width: 120%;
+    }
+    .sectionsubtag{
+        text-align: center;
+        width: 140%;
+    }
+    .second{
+        display: block;
+        margin-left: auto;
+        margin-right: 45%;
+    }    
+
+    .AD{
+        width: 100px;
+    }
+    .contactform{
+        padding: 11px 76px;
+        margin: 0 71px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .banner h1{
+        margin-top: 150px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .banner button{
+        margin-bottom: 10px;
+    }
+    #aboutsection p{
+        text-align: justify;
+    }
+    #aboutsection .cards > div:hover{
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+    .programs .boxContainer{
+        grid-template-columns: 1fr;
+    }
+    .gallery .galleryContainer{
+        column-count: 1;
+    }
+    footer .container{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .banner h1{
+        margin-top: 100px;
+    }
+}
